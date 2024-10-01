@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        String[] names = {"e","i","d","v","f"};
+        int[] ages = {123,435,234,654,134};
+        
+        boolean found = false;
+        
+        System.out.print("Enter a friends name");
+        String name = input.nextLine();
+        
+        for(int i = 0; i < 4; i++) {
+            if(names[i].equals(name)) {
+                System.out.println(ages[i]);
+                found = true;
+                break;
+            }
+        }
+        
+        if(found == false) {
+            System.out.print("Friend not found");
+        }
+    }
+}
