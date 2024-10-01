@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int[] myList = {1,6,76,21,75,12,43};
+        boolean found = false;
+        
+        System.out.println("Enter the search value");
+        int searchItem = input.nextInt();
+        
+        for(int i = 0; i < 6; i++) {
+            if(myList[i] == searchItem) {
+                System.out.println("True");
+                found = true;
+                break;
+            }
+        }
+        
+        if(!found) {
+            System.out.println("False");
+        }
+    }
+}
