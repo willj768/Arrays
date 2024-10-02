@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int[] myList = {12,65,87,23,87,45,32};
+        boolean found = false;
+        int i = 0;
+        
+        System.out.println("Enter the search value");
+        int searchValue = input.nextInt();
+        
+        do {
+            if(myList[i] == searchValue) {
+                found = true;
+                System.out.println("True");
+                break;
+            } else {
+                i += 1;
+            }
+        }
+        while(found == false && i < myList.length);
+        
+        if(!found) {
+            System.out.println("False");
+        }
+    }
+}
