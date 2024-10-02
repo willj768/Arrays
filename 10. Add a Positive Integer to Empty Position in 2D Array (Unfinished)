@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int[][] integer = new int[5][5];
+        boolean positiveInt = false;
+        int index = -1;
+        
+        while(!positiveInt) {
+            System.out.println("Enter a positive integer");
+            int num = input.nextInt();
+            
+            if(num >= 0) {
+                positiveInt = true;
+                break;
+            }
+        }
+        for(int i = 0; i < integer.length; i++) {
+            if(integer[i] == 0) {
+                integer[i] = num;
+                index = i;
+                break;
+            }
+        }
+    }
+}
