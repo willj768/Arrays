@@ -1,1 +1,29 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+    
+        int[] myList = new int[7];
+        boolean found = false; 
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the search value: ");
+        int searchValue = input.nextInt(); 
+
+        int index = 0;
+      
+        while (!found && index < myList.length) {
+            if (myList[index] == searchValue) {
+                found = true; 
+                System.out.println("Value " + searchValue + " found at index " + index);
+                break; 
+            } else {
+                index++; 
+            }
+        }
+
+        if (!found) {
+            System.out.println("Value " + searchValue + " not found in the array.");
+        }
+    }
+}
